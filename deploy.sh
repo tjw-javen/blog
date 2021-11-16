@@ -24,5 +24,5 @@ git config user.email 13437255395@163.com
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:wangtunan/blog.git master:gh-pages
-git push -f git@github.com:wangtunan/blog.git master:gh-pages
+git push -f git@github.com:tanjiawen709398936/blog.git master:gh-pages
 cd -
