@@ -2,7 +2,7 @@
   "name": "blog",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:tanjiawen709398936/blog.git",
+  "repository": "git@github.com:tjw-javens/blog.git",
   "author": "tanjiawen <tanjiawen@dm-ai.cn>",
   "license": "MIT",
   "scripts": {
