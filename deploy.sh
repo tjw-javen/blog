@@ -17,12 +17,12 @@ git add -A
 git commit -m 'depoly脚本更新'
 
 git config user.name tanjiawen
-git config user.email 13437255395@163.com
+git config user.email jiawen_tan@126.com
 
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:wangtunan/blog.git master:gh-pages
-git push -f git@github.com:tanjiawen709398936/blog.git master:gh-pages
+git push -f git@github.com:tjw-javen/blog.git master:gh-pages
 cd -
