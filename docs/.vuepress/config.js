@@ -19,7 +19,7 @@ module.exports = {
         link: '/guide/'
       },
       {
-        text: '书籍',
+        text: '书籍1',
         items: [{
           text: 'js',
           items: [{
