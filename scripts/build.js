@@ -1,5 +1,6 @@
 const {
-  resolve
+  resolve,
+  extname
 } = require('path');
 const {
   existsSync,
@@ -7,9 +8,9 @@ const {
   readdirSync
 } = require('fs');
 
-function readFileList(dir) {
+function readFileList(parentName, dir) {
   const fileList = [];
-  const dirPath = resolve(`./docs/node/${dir}`);
+  const dirPath = resolve(`./docs/${parentName}/${dir}`);
   const isDir = existsSync(dirPath)
   if (!isDir) {
     return fileList;
@@ -17,9 +18,9 @@ function readFileList(dir) {
   const files = readdirSync(dirPath);
   files.forEach((item) => {
     const filename = item.slice(0, -3);
-    const name = filename.split('-')[1]
-
-    if (filename && name) {
+    const names = filename.split('-')
+    const name = names[1] ? names[1] : names[0]
+    if (filename && name && extname(item).includes('.md')) {
       fileList.push([
         `${dir}/${filename}`,
         `${name}`
