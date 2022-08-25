@@ -4,7 +4,7 @@ lang: zh-CN
 heroText: 贵在坚持
 heroImage: /logo.jpg
 actionText: 开始 →
-actionLink: /guide/
+actionLink: /website/
 features:
   - title: A Blog
     details: 专注写作前端博客，记录日常所得。

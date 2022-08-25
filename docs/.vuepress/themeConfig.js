@@ -2,6 +2,10 @@ module.exports = {
     logo: '/logo.jpg',
     nav: require('./nav'),
     sidebar: require('./sideBar'),
+    markdown: {
+        // 代码块行号
+        lineNumbers: true,
+    },
     // sidebar: 'auto',
     // 标题深度，2 表示提取 h2 和 h3 标题
     sidebarDepth: 2,
