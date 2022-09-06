@@ -52,12 +52,12 @@ sudo rm -rf /usr/local/{bin/{node,npm},lib/node_modules/npm,lib/node,share/man/*
 - 内建模块直接从内存加载
 - 文件模块通过文件查找定位到文件
 - 包通过 package.json 里面的 main 字段查找入口文件
-
+- [require实现模块化](https://mp.weixin.qq.com/s?__biz=MzA4MjA1MDM3Ng==&mid=2450827055&idx=1&sn=18606f354f031eea24544929132f53d8&chksm=886bab08bf1c221e28aadfed3d7983ea98e368e390219facca608c8bdf93ec3b71aee8db39cc#rd)
 ### module.exports
 
 ```js
 // 通过如下模块包装得到
-(funciton (exports, require, module, __filename, __dirname) { // 包装头
+(function (exports, require, module, __filename, __dirname) { // 包装头
 
 }); // 包装尾
 ```

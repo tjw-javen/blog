@@ -1,6 +1,7 @@
 const {
   resolve,
-  extname
+  extname,
+  basename
 } = require('path');
 const {
   existsSync,
@@ -17,7 +18,7 @@ function readFileList(parentName, dir) {
   }
   const files = readdirSync(dirPath);
   files.forEach((item) => {
-    const filename = item.slice(0, -3);
+    const filename = basename(item, extname(item));
     const names = filename.split('-')
     const name = names[1] ? names[1] : names[0]
     if (filename && name && extname(item).includes('.md')) {

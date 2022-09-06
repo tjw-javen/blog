@@ -43,6 +43,10 @@ module.exports = [{
                 text: 'Git',
                 link: '/git/'
             },
+            {
+                text: 'vite',
+                link: '/vite/'
+            },
         ]
     },
     {
