@@ -90,6 +90,11 @@ function renderOtherSiderBar() {
             children: readFileList(parentName, 'node')
         },
         {
+            title: "node-study",
+            collapsable: true,
+            children: readFileList(parentName, 'node-study')
+        },
+        {
             title: "other",
             collapsable: true,
             children: readFileList(parentName, 'other')
