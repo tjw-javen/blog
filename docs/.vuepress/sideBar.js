@@ -40,6 +40,11 @@ function renderNodeSiderBar() {
             children: readFileList(parentName, 'koa2')
         },
         {
+            title: "Nest",
+            collapsable: true,
+            children: readFileList(parentName, 'nest')
+        },
+        {
             title: "其他",
             collapsable: false,
             children: readFileList(parentName, 'other')
@@ -53,6 +58,11 @@ function renderOtherSiderBar() {
             title: "深入浅出 Vue3",
             collapsable: true,
             children: readFileList(parentName, 'resource-analysis')
+        },
+        {
+            title: "Vue3 plain",
+            collapsable: true,
+            children: readFileList(parentName, 'vue3-plain')
         },
         {
             title: "浏览器",
