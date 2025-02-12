@@ -87,6 +87,46 @@ Buffer.alloUnsafe(size); // 创建一个指定大小的Buffer，但是可能包�
 buf.toString(); // 将缓冲区的数据转换成字符串
 ```
 
+### fs
+
+文件写入原理
+
+```js
+fs.open();
+fs.write();
+fs.close();
+```
+
+简单文件写入
+
+- fs.writeFile() 异步写入文件
+- fs.writeFileAsync() 同步写入文件
+
+```js
+// flag: 'w' 内容覆盖
+fs.writeFile('hello.text', '我是写入的内容', { flag: 'w' }, function (err) {
+  if (!err) {
+    console.log('写入文件成功');
+  } else {
+    console.log(err);
+  }
+});
+// flag: 'a' 内容追加
+fs.writeFile('hello.text', '我是写入的内容', { flag: 'a' }, function (err) {
+  if (!err) {
+    console.log('写入文件成功');
+  } else {
+    console.log(err);
+  }
+});
+// fs.writeFile 是对 fs.open fs.write fs.close的一层封装
+// fs.writeFile 第三个参数为可选参数
+```
+
+#### flag 的值
+
+![编译器](../img/node-study/open-status.jpg)
+
 ### path
 
 [详情](https://tjw-javen.github.io/blog/node/modules/-1.0%20%E6%9C%AC%E5%9C%B0%E8%B7%AF%E5%BE%84%E5%A4%84%E7%90%86%20path.html#%E6%A8%A1%E5%9D%97%E6%A6%82%E8%A7%88)
