@@ -100,7 +100,7 @@ fs.close();
 简单文件写入
 
 - fs.writeFile() 异步写入文件
-- fs.writeFileAsync() 同步写入文件
+- fs.writeFileSync() 同步写入文件
 
 ```js
 // flag: 'w' 内容覆盖
@@ -112,7 +112,7 @@ fs.writeFile('hello.text', '我是写入的内容', { flag: 'w' }, function (err
   }
 });
 // flag: 'a' 内容追加
-fs.writeFile('hello.text', '我是写入的内容', { flag: 'a' }, function (err) {
+fs.writeFile('hello.txt', '我是写入的内容', { flag: 'a' }, function (err) {
   if (!err) {
     console.log('写入文件成功');
   } else {
@@ -126,6 +126,63 @@ fs.writeFile('hello.text', '我是写入的内容', { flag: 'a' }, function (err
 #### flag 的值
 
 ![编译器](../img/node-study/open-status.jpg)
+
+#### 流式文件写入
+
+同步、异步、简单文件写入都不适合大文件的写入，性能较差，容易导致内存溢出
+
+```js
+const ws = fs.createWriteStream('hello.txt');
+// once 监听一次, on 一直监听
+ws.once('open', () => {
+  console.log('流打开了');
+});
+ws.once('close', () => {
+  console.log('流关闭了');
+});
+// 持续写入内容
+ws.write('1111');
+ws.write('222');
+ws.write('333');
+// 结束流，ws.close()是关闭流，由于是异步的用ws.close会导致后面的内容无法写入
+ws.end();
+```
+
+可读可写流，相当于复制文件，一般底层用的较多
+
+```js
+const rs = fs.createReadStream('1.mp3');
+const ws = fs.createWriteStream('2.mp3');
+// pipe可以将可读流中的数据写入到可写流
+rs.pipe(ws);
+```
+
+fs 其他模块
+
+```js
+// 验证文件是否存在
+fs.existsSync(path);
+// 获取文件信息
+const stat = await fs.statSync(path);
+// 是否是文件
+stat.isFile();
+// 是否是文件夹
+stat.isDirectory();
+// 删除文件
+fs.unlinkSync(path);
+// 列出文件
+fs.readdirSync(path[,options])
+// 截断文件
+fs.truncateSync(path,len)
+// 建立目录
+fs.mkdirSync(path[,mode])
+// 删除目录
+fs.rmdirSync(path)
+// 重命名文件或目录, 相当于剪切
+fs.renameSync(oldPath,newPath)
+// 监视文件更改写入 options:{interval:1000} 每隔1s检测一次
+fs.watchFile(filename[,options],listener)
+```
 
 ### path
 
@@ -141,6 +198,14 @@ path.join() 先拼接，在 normalize 正规化路劲
 path.resolve() 相当于 cd
 
 fs.readFile('./node.md') 不能用相对路径 ，是以启动命令路劲为根路经计算，会找不到文件，使用绝对路径
+
+- 关于绝对路径
+
+```js
+fs.readFile('C:\user\b\c')
+// 需要转义 第一个\为转义符
+fs.readFile('C:\\user\\b\\c')
+```
 
 ### process
 
