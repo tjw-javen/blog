@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>性能优化 | tanjiawen</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/blog/icon.png">
+    <meta name="description" content="Just do it">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.fb68c3ca.css" as="style"><link rel="preload" href="/blog/assets/js/app.a9945600.js" as="script"><link rel="preload" href="/blog/assets/js/2.3af135cd.js" as="script"><link rel="preload" href="/blog/assets/js/133.e2199dcd.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.8284ffc7.js"><link rel="prefetch" href="/blog/assets/js/100.f43ee495.js"><link rel="prefetch" href="/blog/assets/js/101.af588b87.js"><link rel="prefetch" href="/blog/assets/js/102.fceaf7cd.js"><link rel="prefetch" href="/blog/assets/js/103.237512b5.js"><link rel="prefetch" href="/blog/assets/js/104.5b0b5556.js"><link rel="prefetch" href="/blog/assets/js/105.377afdf9.js"><link rel="prefetch" href="/blog/assets/js/106.6c8faab0.js"><link rel="prefetch" href="/blog/assets/js/107.f05b17b2.js"><link rel="prefetch" href="/blog/assets/js/108.24380ae4.js"><link rel="prefetch" href="/blog/assets/js/109.4fc3aa4f.js"><link rel="prefetch" href="/blog/assets/js/11.9e763810.js"><link rel="prefetch" href="/blog/assets/js/110.9872b4b9.js"><link rel="prefetch" href="/blog/assets/js/111.8be8fde4.js"><link rel="prefetch" href="/blog/assets/js/112.9f21b37f.js"><link rel="prefetch" href="/blog/assets/js/113.5d6d8b94.js"><link rel="prefetch" href="/blog/assets/js/114.ae32905e.js"><link rel="prefetch" href="/blog/assets/js/115.6c90fdfc.js"><link rel="prefetch" href="/blog/assets/js/116.4c181179.js"><link rel="prefetch" href="/blog/assets/js/117.b775cf93.js"><link rel="prefetch" href="/blog/assets/js/118.1cc72273.js"><link rel="prefetch" href="/blog/assets/js/119.e1c025d6.js"><link rel="prefetch" href="/blog/assets/js/12.06a3d36d.js"><link rel="prefetch" href="/blog/assets/js/120.4932db4b.js"><link rel="prefetch" href="/blog/assets/js/121.276f05eb.js"><link rel="prefetch" href="/blog/assets/js/122.26d84809.js"><link rel="prefetch" href="/blog/assets/js/123.a1dcb4d5.js"><link rel="prefetch" href="/blog/assets/js/124.bc51e9ad.js"><link rel="prefetch" href="/blog/assets/js/125.f1c600f6.js"><link rel="prefetch" href="/blog/assets/js/126.4a939469.js"><link rel="prefetch" href="/blog/assets/js/127.de1057e9.js"><link rel="prefetch" href="/blog/assets/js/128.47b26a21.js"><link rel="prefetch" href="/blog/assets/js/129.375e29fe.js"><link rel="prefetch" href="/blog/assets/js/13.5f19c836.js"><link rel="prefetch" href="/blog/assets/js/130.2f5f1157.js"><link rel="prefetch" href="/blog/assets/js/131.41c79642.js"><link rel="prefetch" href="/blog/assets/js/132.bf263adf.js"><link rel="prefetch" href="/blog/assets/js/134.a8b03f50.js"><link rel="prefetch" href="/blog/assets/js/135.6ec46987.js"><link rel="prefetch" href="/blog/assets/js/136.8b3fdace.js"><link rel="prefetch" href="/blog/assets/js/137.a427c5c6.js"><link rel="prefetch" href="/blog/assets/js/138.1cf3e855.js"><link rel="prefetch" href="/blog/assets/js/139.63e6b0c6.js"><link rel="prefetch" href="/blog/assets/js/14.51a8431a.js"><link rel="prefetch" href="/blog/assets/js/140.9615b46c.js"><link rel="prefetch" href="/blog/assets/js/141.230b60ba.js"><link rel="prefetch" href="/blog/assets/js/142.8eda03ee.js"><link rel="prefetch" href="/blog/assets/js/143.c4d976f1.js"><link rel="prefetch" href="/blog/assets/js/144.699fc7ec.js"><link rel="prefetch" href="/blog/assets/js/145.e3ab15da.js"><link rel="prefetch" href="/blog/assets/js/146.08905a96.js"><link rel="prefetch" href="/blog/assets/js/147.09ca7dfc.js"><link rel="prefetch" href="/blog/assets/js/148.45af3dc5.js"><link rel="prefetch" href="/blog/assets/js/149.c3b4d241.js"><link rel="prefetch" href="/blog/assets/js/15.72a92a5e.js"><link rel="prefetch" href="/blog/assets/js/150.6b86563f.js"><link rel="prefetch" href="/blog/assets/js/151.804e4177.js"><link rel="prefetch" href="/blog/assets/js/152.70cc135c.js"><link rel="prefetch" href="/blog/assets/js/153.6de516b6.js"><link rel="prefetch" href="/blog/assets/js/154.c642c181.js"><link rel="prefetch" href="/blog/assets/js/155.b59c4d7f.js"><link rel="prefetch" href="/blog/assets/js/156.ee19c90e.js"><link rel="prefetch" href="/blog/assets/js/157.e249f132.js"><link rel="prefetch" href="/blog/assets/js/158.f49f881b.js"><link rel="prefetch" href="/blog/assets/js/159.ee57b260.js"><link rel="prefetch" href="/blog/assets/js/16.ef643ba6.js"><link rel="prefetch" href="/blog/assets/js/160.3f1f373b.js"><link rel="prefetch" href="/blog/assets/js/161.8f3bf814.js"><link rel="prefetch" href="/blog/assets/js/162.be1644a6.js"><link rel="prefetch" href="/blog/assets/js/163.54bfb0d9.js"><link rel="prefetch" href="/blog/assets/js/164.c7630457.js"><link rel="prefetch" href="/blog/assets/js/165.48921b01.js"><link rel="prefetch" href="/blog/assets/js/166.ff957762.js"><link rel="prefetch" href="/blog/assets/js/167.952152c7.js"><link rel="prefetch" href="/blog/assets/js/168.18858c2d.js"><link rel="prefetch" href="/blog/assets/js/169.cfa7b9d3.js"><link rel="prefetch" href="/blog/assets/js/17.a2ce8782.js"><link rel="prefetch" href="/blog/assets/js/170.2f675b22.js"><link rel="prefetch" href="/blog/assets/js/171.3a66756a.js"><link rel="prefetch" href="/blog/assets/js/172.842fd9e9.js"><link rel="prefetch" href="/blog/assets/js/173.5bba42f1.js"><link rel="prefetch" href="/blog/assets/js/174.b3b3ea12.js"><link rel="prefetch" href="/blog/assets/js/18.7f01d8ef.js"><link rel="prefetch" href="/blog/assets/js/19.e3513f33.js"><link rel="prefetch" href="/blog/assets/js/20.03616f12.js"><link rel="prefetch" href="/blog/assets/js/21.2298db57.js"><link rel="prefetch" href="/blog/assets/js/22.74c0e9e0.js"><link rel="prefetch" href="/blog/assets/js/23.f3fca169.js"><link rel="prefetch" href="/blog/assets/js/24.76042ebf.js"><link rel="prefetch" href="/blog/assets/js/25.565736de.js"><link rel="prefetch" href="/blog/assets/js/26.a780b1d1.js"><link rel="prefetch" href="/blog/assets/js/27.9508d923.js"><link rel="prefetch" href="/blog/assets/js/28.6d3a3926.js"><link rel="prefetch" href="/blog/assets/js/29.1d80c479.js"><link rel="prefetch" href="/blog/assets/js/3.8c172953.js"><link rel="prefetch" href="/blog/assets/js/30.34bf483b.js"><link rel="prefetch" href="/blog/assets/js/31.e416afee.js"><link rel="prefetch" href="/blog/assets/js/32.78191060.js"><link rel="prefetch" href="/blog/assets/js/33.787fa150.js"><link rel="prefetch" href="/blog/assets/js/34.83d3fa1e.js"><link rel="prefetch" href="/blog/assets/js/35.758f7354.js"><link rel="prefetch" href="/blog/assets/js/36.4fc20e4a.js"><link rel="prefetch" href="/blog/assets/js/37.516227a0.js"><link rel="prefetch" href="/blog/assets/js/38.984ec5bb.js"><link rel="prefetch" href="/blog/assets/js/39.6e70b5ca.js"><link rel="prefetch" href="/blog/assets/js/4.286f5b50.js"><link rel="prefetch" href="/blog/assets/js/40.3ce5d266.js"><link rel="prefetch" href="/blog/assets/js/41.04d9a371.js"><link rel="prefetch" href="/blog/assets/js/42.f9e63ded.js"><link rel="prefetch" href="/blog/assets/js/43.ac4d5aee.js"><link rel="prefetch" href="/blog/assets/js/44.1e8f4b25.js"><link rel="prefetch" href="/blog/assets/js/45.7b777d65.js"><link rel="prefetch" href="/blog/assets/js/46.96934414.js"><link rel="prefetch" href="/blog/assets/js/47.2406aee8.js"><link rel="prefetch" href="/blog/assets/js/48.371ab31c.js"><link rel="prefetch" href="/blog/assets/js/49.bd5be0a3.js"><link rel="prefetch" href="/blog/assets/js/5.967910cb.js"><link rel="prefetch" href="/blog/assets/js/50.3387825c.js"><link rel="prefetch" href="/blog/assets/js/51.9765871b.js"><link rel="prefetch" href="/blog/assets/js/52.eea392cb.js"><link rel="prefetch" href="/blog/assets/js/53.ee1c2a63.js"><link rel="prefetch" href="/blog/assets/js/54.6440a057.js"><link rel="prefetch" href="/blog/assets/js/55.fba17580.js"><link rel="prefetch" href="/blog/assets/js/56.ec7a617b.js"><link rel="prefetch" href="/blog/assets/js/57.a5b02e90.js"><link rel="prefetch" href="/blog/assets/js/58.acd13ae5.js"><link rel="prefetch" href="/blog/assets/js/59.63e4c77d.js"><link rel="prefetch" href="/blog/assets/js/6.95f5a1df.js"><link rel="prefetch" href="/blog/assets/js/60.059e8999.js"><link rel="prefetch" href="/blog/assets/js/61.3c8c64c6.js"><link rel="prefetch" href="/blog/assets/js/62.29f2d328.js"><link rel="prefetch" href="/blog/assets/js/63.fd04fdac.js"><link rel="prefetch" href="/blog/assets/js/64.3a515004.js"><link rel="prefetch" href="/blog/assets/js/65.cacaea7e.js"><link rel="prefetch" href="/blog/assets/js/66.ab62c848.js"><link rel="prefetch" href="/blog/assets/js/67.36d6f043.js"><link rel="prefetch" href="/blog/assets/js/68.ea171a47.js"><link rel="prefetch" href="/blog/assets/js/69.d81d52c7.js"><link rel="prefetch" href="/blog/assets/js/7.d1c12d08.js"><link rel="prefetch" href="/blog/assets/js/70.ed56051d.js"><link rel="prefetch" href="/blog/assets/js/71.8002c62d.js"><link rel="prefetch" href="/blog/assets/js/72.5415c4f8.js"><link rel="prefetch" href="/blog/assets/js/73.343c9e75.js"><link rel="prefetch" href="/blog/assets/js/74.540fa3f7.js"><link rel="prefetch" href="/blog/assets/js/75.517dd1ef.js"><link rel="prefetch" href="/blog/assets/js/76.2aec58c7.js"><link rel="prefetch" href="/blog/assets/js/77.22eb4605.js"><link rel="prefetch" href="/blog/assets/js/78.e8a10b94.js"><link rel="prefetch" href="/blog/assets/js/79.2026245e.js"><link rel="prefetch" href="/blog/assets/js/8.07533508.js"><link rel="prefetch" href="/blog/assets/js/80.47bf8af2.js"><link rel="prefetch" href="/blog/assets/js/81.85a9c4cc.js"><link rel="prefetch" href="/blog/assets/js/82.99464a5d.js"><link rel="prefetch" href="/blog/assets/js/83.89857466.js"><link rel="prefetch" href="/blog/assets/js/84.2535f1b2.js"><link rel="prefetch" href="/blog/assets/js/85.3fb68877.js"><link rel="prefetch" href="/blog/assets/js/86.4f401dab.js"><link rel="prefetch" href="/blog/assets/js/87.5eaeb89e.js"><link rel="prefetch" href="/blog/assets/js/88.77c09654.js"><link rel="prefetch" href="/blog/assets/js/89.3fca8870.js"><link rel="prefetch" href="/blog/assets/js/9.d0d2872d.js"><link rel="prefetch" href="/blog/assets/js/90.63d8c5d0.js"><link rel="prefetch" href="/blog/assets/js/91.5075603f.js"><link rel="prefetch" href="/blog/assets/js/92.63c5ea3b.js"><link rel="prefetch" href="/blog/assets/js/93.36e1c443.js"><link rel="prefetch" href="/blog/assets/js/94.af8b02f1.js"><link rel="prefetch" href="/blog/assets/js/95.cefba26c.js"><link rel="prefetch" href="/blog/assets/js/96.35a18ac0.js"><link rel="prefetch" href="/blog/assets/js/97.5a074780.js"><link rel="prefetch" href="/blog/assets/js/98.ef4e180d.js"><link rel="prefetch" href="/blog/assets/js/99.c3eb760b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.fb68c3ca.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/logo.jpg" alt="tanjiawen" class="logo"> <span class="site-name can-hide">tanjiawen</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/website/" class="nav-link">
+  网站推荐
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://interview2.poetries.top/docs/base.html#%E4%B8%80%E3%80%81html%E3%80%81http%E3%80%81web%E7%BB%BC%E5%90%88%E9%97%AE%E9%A2%98" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  面试题1
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://wangtunan.github.io/blog/interview/#javascript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E9%9D%A2%E8%AF%95%E9%A2%98" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  面试题2
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><span class="title">书籍</span> <span class="arrow down"></span></button> <button type="button" aria-label="书籍" class="mobile-dropdown-title"><span class="title">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          js
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/books/js/es6/" class="nav-link">
+  es6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          web 3D
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="http://www.webgl3d.cn/WebGL/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webgl
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://www.webgl3d.cn/Three.js/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  threejs
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vite/" class="nav-link">
+  vite
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/blog/node/base/01-环境搭建.html" class="nav-link">
+  node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Typescript" class="dropdown-title"><span class="title">Typescript</span> <span class="arrow down"></span></button> <button type="button" aria-label="Typescript" class="mobile-dropdown-title"><span class="title">Typescript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/typescript/base.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/typescript/challenge.html" class="nav-link">
+  高级api
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/other/resource-analysis/vue2.html" class="nav-link">
+  other
+</a></div><div class="nav-item"><a href="https://github.com/tjw-javen/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/website/" class="nav-link">
+  网站推荐
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://interview2.poetries.top/docs/base.html#%E4%B8%80%E3%80%81html%E3%80%81http%E3%80%81web%E7%BB%BC%E5%90%88%E9%97%AE%E9%A2%98" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  面试题1
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://wangtunan.github.io/blog/interview/#javascript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E9%9D%A2%E8%AF%95%E9%A2%98" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  面试题2
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><span class="title">书籍</span> <span class="arrow down"></span></button> <button type="button" aria-label="书籍" class="mobile-dropdown-title"><span class="title">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          js
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/books/js/es6/" class="nav-link">
+  es6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          web 3D
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="http://www.webgl3d.cn/WebGL/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webgl
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://www.webgl3d.cn/Three.js/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  threejs
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vite/" class="nav-link">
+  vite
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/blog/node/base/01-环境搭建.html" class="nav-link">
+  node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Typescript" class="dropdown-title"><span class="title">Typescript</span> <span class="arrow down"></span></button> <button type="button" aria-label="Typescript" class="mobile-dropdown-title"><span class="title">Typescript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/typescript/base.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/typescript/challenge.html" class="nav-link">
+  高级api
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/other/resource-analysis/vue2.html" class="nav-link">
+  other
+</a></div><div class="nav-item"><a href="https://github.com/tjw-javen/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>深入浅出 Vue3</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue3 plain</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>浏览器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>算法基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>前端基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/other/base/async_await.html" class="sidebar-link">async_await</a></li><li><a href="/blog/other/base/function_program.html" class="sidebar-link">function_program</a></li><li><a href="/blog/other/base/js_promise.html" class="sidebar-link">js_promise</a></li><li><a href="/blog/other/base/JS函数篇.html" class="sidebar-link">JS函数篇</a></li><li><a href="/blog/other/base/JS数据类型篇.html" class="sidebar-link">JS数据类型篇</a></li><li><a href="/blog/other/base/JS运行机制.html" class="sidebar-link">JS运行机制</a></li><li><a href="/blog/other/base/microservice.html" class="sidebar-link">microservice</a></li><li><a href="/blog/other/base/scaffold.html" class="sidebar-link">scaffold</a></li><li><a href="/blog/other/base/smooth_site.html" class="sidebar-link">smooth_site</a></li><li><a href="/blog/other/base/webpack.html" class="sidebar-link">webpack</a></li><li><a href="/blog/other/base/关于动画.html" class="sidebar-link">关于动画</a></li><li><a href="/blog/other/base/各种手写代码实现.html" class="sidebar-link">各种手写代码实现</a></li><li><a href="/blog/other/base/性能优化.html" class="active sidebar-link">性能优化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/other/base/性能优化.html#防抖-节流" class="sidebar-link">防抖&amp;节流</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/other/base/性能优化.html#延迟执行的防抖函数" class="sidebar-link">延迟执行的防抖函数</a></li><li class="sidebar-sub-header"><a href="/blog/other/base/性能优化.html#lodash带有立即执行选项的防抖函数" class="sidebar-link">lodash带有立即执行选项的防抖函数：</a></li><li class="sidebar-sub-header"><a href="/blog/other/base/性能优化.html#节流函数" class="sidebar-link">节流函数</a></li></ul></li></ul></li><li><a href="/blog/other/base/模块化.html" class="sidebar-link">模块化</a></li><li><a href="/blog/other/base/设计模式.html" class="sidebar-link">设计模式</a></li><li><a href="/blog/other/base/迭代器.html" class="sidebar-link">迭代器</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>书籍</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javascript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node-study</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>other</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>rxjs</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="性能优化"><a href="#性能优化" class="header-anchor">#</a> 性能优化</h1> <h3 id="开启-etag-gzip"><a href="#开启-etag-gzip" class="header-anchor">#</a> 开启 ETag + Gzip</h3> <p>最重要的优化：使用 <code>oss</code> + <code>ETag</code> + <code>Gzip</code></p> <p>推荐插件：<code>gulp-oss-sync</code>， oss 自带 ETag + Gzip</p> <p>ngnix 也有 Gzip的功能</p> <h3 id="请求优化"><a href="#请求优化" class="header-anchor">#</a> 请求优化</h3> <ol><li>减少请求数
+<ul><li>懒加载</li> <li>雪碧图</li> <li>合并CSS、JS</li></ul></li> <li>减少请求量</li> <li>合理利用缓存</li> <li>CDN</li> <li>http2 || keep-alive</li></ol> <h3 id="重定向优化"><a href="#重定向优化" class="header-anchor">#</a> 重定向优化</h3> <ul><li>尽可能避免 301、302 重定向</li> <li>需要重定向时，可以把重定向之后的地址直接写到前端的html或JS中</li> <li>可以减少客户端与服务端的通信过程，节省重定向耗时</li></ul> <h3 id="dns优化"><a href="#dns优化" class="header-anchor">#</a> DNS优化</h3> <ul><li>减少DNS的请求次数
+<ul><li>尽量把各种资源放在一个cdn域名上</li></ul></li> <li>进行DNS预获取
+<ul><li>预先加载(prefetch): 利用浏览器的空闲时间去先下载用户指定需要的内容,然后缓存起来,在用户下次加载时,就直接从缓存中取出来</li> <li>淘宝网案例：<code>&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//g.alicdn.com&quot;&gt;</code></li></ul></li></ul> <h3 id="渲染优化"><a href="#渲染优化" class="header-anchor">#</a> 渲染优化</h3> <ul><li>减少重绘、重排</li> <li>防抖</li> <li>节流</li></ul> <h3 id="代码优化"><a href="#代码优化" class="header-anchor">#</a> 代码优化</h3> <ul><li>CSS放在head中</li> <li>减少DOM操作</li> <li>懒函数</li> <li>减少层级访问</li> <li>事件委托</li></ul> <h3 id="单页面优化"><a href="#单页面优化" class="header-anchor">#</a> 单页面优化</h3> <ul><li>PWA直出</li> <li>预加载</li> <li>预渲染</li> <li>SSR</li></ul> <h3 id="异步加载-defer-和-async"><a href="#异步加载-defer-和-async" class="header-anchor">#</a> 异步加载（defer 和 async）</h3> <ul><li>都是异步加载</li> <li>都仅适用于外部脚本</li> <li>async 优先</li> <li>async 是无序的，只要下载完毕就会立即执行。
+<ul><li>PC淘宝网，head中的script 都是 async</li></ul></li> <li>defer 是有序的，<code>script.js</code> 的执行要在所有元素解析完成之后，<code>DOMContentLoaded</code> 事件触发之前完成。
+<ul><li>Mobile淘宝网，在body中script 同时有 async 和 defer</li> <li><code>DOMContentLoaded</code> 表示 <code>dom</code> 加载并解析完成</li></ul></li></ul> <h3 id="h5预渲染-prerender"><a href="#h5预渲染-prerender" class="header-anchor">#</a> H5预渲染（prerender）</h3> <ul><li>HTTPS页面 不可用 -.-!</li></ul> <h3 id="网页性能查看"><a href="#网页性能查看" class="header-anchor">#</a> 网页性能查看</h3> <p>推荐：</p> <ol><li>Chrome -&gt; 下载<code>Lighthouse</code>插件</li> <li>通过控制台的 <code>Audits</code> 使用 <code>Lighthouse</code></li> <li>得到性能报告</li></ol> <h3 id="千-万条列表更新方法"><a href="#千-万条列表更新方法" class="header-anchor">#</a> 千/万条列表更新方法</h3> <p>参考 <a href="https://github.com/Akryum/vue-virtual-scroller" target="_blank" rel="noopener noreferrer">vue-virtual-scroller<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>源码分析：</p> <ol><li>根据 <code>props item-size</code> 计算滚动高度</li> <li>通过 <code>transform: translate</code> + <code>touchMove</code> 只做虚拟滚动</li> <li>通过计算 <code>startIndex</code> 和 <code>endIndex</code> 计算 <code>translate</code> 的值</li></ol> <p>总结：</p> <ul><li>该库的滚动实现利用 减少DOM的使用，通过计算来只做一个虚拟滚动</li> <li>但是该库太过于依赖 props传的 <code>item-size</code> 或 <code>sizeField</code> 计算高度</li></ul> <p>构思：</p> <ul><li>如果要实现一个动态高度的虚拟滚动，是否可以通过前后添加预期DOM来计算即将渲染的DOM的高度，从而摆脱<code>props</code>的依赖？</li></ul> <h2 id="防抖-节流"><a href="#防抖-节流" class="header-anchor">#</a> 防抖&amp;节流</h2> <p>节流（throttle）：是将函数多次调用变成每隔一段时间执行（比如在onresize时调用的函数）。</p> <p>防抖（debounce）：用来解决一些函数多次调用的问题（例如：一个实时搜索功能），需要加以限制。</p> <h3 id="延迟执行的防抖函数"><a href="#延迟执行的防抖函数" class="header-anchor">#</a> 延迟执行的防抖函数</h3> <p>只在最后一次触发时，执行目标函数。</p> <div class="language- extra-class"><pre class="language-text"><code>const debounce = (func, wait = 500) =&gt; {
+  let timer = 0
+  return function(...args) {
+
+    // 如果500ms再次触发，那么就将定时器重置
+
+    if (timer) clearTimeout(timer);
+
+    timer = setTimeout(() =&gt; {
+      func.apply(this, args)
+    }, wait)
+  }
+}
+</code></pre></div><p>如果是发送请求的按钮。那么应该使用立即执行的防抖函数</p> <h3 id="lodash带有立即执行选项的防抖函数"><a href="#lodash带有立即执行选项的防抖函数" class="header-anchor">#</a> lodash带有立即执行选项的防抖函数：</h3> <div class="language- extra-class"><pre class="language-text"><code>function debounce (func, wait = 500, immediate = true) {
+  let timer, context, args
+
+  // 延迟执行函数
+  const later = () =&gt; setTimeout(() =&gt; {
+    // 内存清理
+    timer = null
+
+    if (!immediate) {
+      // 后执行防抖
+      // 使用到之前缓存的参数和上下文
+      func.apply(context, args)
+
+      // 清理内存
+      context = args = null
+    }
+  }, wait)
+
+  // 这里返回的函数是每次实际调用的函数
+  return function(...params) {
+    if (!timer) {
+      // 如果没有setTimeout，就创建一个
+      timer = later()
+
+      if (immediate) {
+        // 立即执行的防抖函数
+        func.apply(this, params)
+      } else {
+        // 后执行的防抖函数
+        // 缓存参数和调用上下文
+        context = this
+        args = params
+      }
+      
+    } else {
+      // 如果有setTimeout，那么重新计时
+      clearTimeout(timer)
+      timer = later()
+    }
+  }
+}
+</code></pre></div><h3 id="节流函数"><a href="#节流函数" class="header-anchor">#</a> 节流函数</h3> <p>比较缓存时间和当前时间是否在时间间隔外</p> <p>underscore的节流函数源码实现</p> <div class="language- extra-class"><pre class="language-text"><code>_.throttle = function(func, wait, options) {
+  
+  // options选项
+  // 如果想忽略开始函数的的调用，传入{leading: false}
+  // 如果想忽略结尾函数的调用，传入{trailing: false}
+
+  var context, args, result;
+  var timeout = null;
+
+  // 缓存上次调用时间
+  var previous = 0;
+
+  // 如果 options 没传则设为空对象
+  if (!options) options = {};
+
+  // 定时器回调函数
+  var later = function() {
+
+    // 如果设置了 leading（忽略开始函数），就将 previous 设为 0
+    previous = options.leading === false ? 0 : _.now();
+
+    // 置空一是为了防止内存泄漏，二是为了下面的定时器判断
+    timeout = null;
+    result = func.apply(context, args);
+    if (!timeout) context = args = null;
+
+  };
+
+  return function() {
+
+    // 获得当前时间戳
+    var now = _.now();
+
+    // 首次进入：因为previous=0，所以，如果不设置忽略开始函数
+    // 那么 previous = now
+    if (!previous &amp;&amp; options.leading === false) previous = now;
+
+    // 计算剩余时间
+    var remaining = wait - (now - previous);
+
+    context = this;
+    args = arguments;
+    
+    if (remaining &lt;= 0 || remaining &gt; wait) {
+      // 如果当前调用已经大于上次调用时间+wait。（已过时间间隔）
+      // 或者用户手动调了时间
+
+      // 如果存在定时器就清理掉
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = null;
+      }
+
+      // 缓存时间
+      previous = now;
+      result = func.apply(context, args);
+
+      // 清理内存
+      if (!timeout) context = args = null;
+
+    } else if (!timeout &amp;&amp; options.trailing !== false) {
+      // 开始或者结尾时调用的函数
+
+      // 开始调用时: remaining = wait
+      // 最后调用时：remaining = 距离wait时间
+      timeout = setTimeout(later, remaining); 
+    }
+
+    return result;
+  };
+};
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/10/2022, 12:08:04 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/other/base/各种手写代码实现.html" class="prev">
+        各种手写代码实现
+      </a></span> <span class="next"><a href="/blog/other/base/模块化.html">
+        模块化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.a9945600.js" defer></script><script src="/blog/assets/js/2.3af135cd.js" defer></script><script src="/blog/assets/js/133.e2199dcd.js" defer></script>
+  </body>
+</html>
